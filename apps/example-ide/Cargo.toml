@@ -1,0 +1,11 @@
+[package]
+name = "example-ide"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+eframe.workspace = true
+ide-brand.workspace = true
+ide-ui.workspace = true
