@@ -1,0 +1,13 @@
+# Template: @DISPLAY_NAME@ and @APP_ID@ are filled from crates/brand by scripts/install-desktop.sh.
+[Desktop Entry]
+Type=Application
+Name=@DISPLAY_NAME@
+GenericName=Code Editor
+Comment=Write and edit code
+Exec=@APP_ID@ %F
+Icon=@APP_ID@
+Terminal=false
+Categories=Development;IDE;
+Keywords=code;editor;ide;
+StartupNotify=true
+StartupWMClass=@APP_ID@

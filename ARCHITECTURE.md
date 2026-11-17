@@ -35,10 +35,10 @@ example-ide/
 │       └── hicolor/                 # Generated: Linux icon sizes, named after the app id
 ├── packaging/
 │   └── linux/
-│       └── example-ide.desktop      # Name + icon in the dock and app menu; file name = app id
+│       └── app.desktop.in           # Dock/menu entry template; name and id filled from brand
 ├── scripts/                         # Developer shell helpers
 │   ├── app-icon.sh                  # Renders app-icon.svg into app-icon.png and hicolor/
-│   └── install-desktop.sh           # Registers the dev build with the desktop (--remove to undo)
+│   └── install-desktop.sh           # Registers the dev build: name + icon in the dock (--remove)
 ├── target/                          # Build output (gitignored)
 ├── .gitattributes                   # Line endings: LF everywhere
 ├── .gitignore

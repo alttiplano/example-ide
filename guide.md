@@ -103,7 +103,7 @@ example-ide/
 ├── assets/
 │   └── app-icon/               # app icon: app-icon.svg master + generated sizes (original artwork only)
 ├── packaging/
-│   └── linux/                  # example-ide.desktop and anything the .deb needs
+│   └── linux/                  # app.desktop.in (filled from crates/brand) and anything the .deb needs
 ├── docs/
 │   ├── architecture.md         # the layer table below, kept up to date
 │   └── releasing.md            # the release recipe
@@ -294,7 +294,8 @@ with egui. If not, stop and discuss before going on.
    `[package.metadata.deb]` section in `apps/example-ide/Cargo.toml`.
 2. The package must install:
    - the binary to `/usr/bin/example-ide`
-   - `packaging/linux/example-ide.desktop` to `/usr/share/applications/`
+   - `packaging/linux/app.desktop.in`, filled from `crates/brand` (as `scripts/install-desktop.sh`
+     does), to `/usr/share/applications/example-ide.desktop`
    - the icons in `assets/app-icon/hicolor/` to `/usr/share/icons/hicolor/` (rendered by
      `scripts/app-icon.sh`; original artwork, not copied from another product)
 3. Name the output `example-ide-<version>-linux-x86_64.deb`. The updater relies on this pattern.

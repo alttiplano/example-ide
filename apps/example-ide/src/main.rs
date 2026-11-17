@@ -7,7 +7,7 @@ const ICON_PNG: &[u8] = include_bytes!("../../../assets/app-icon/app-icon.png");
 fn main() -> eframe::Result {
     let mut viewport = egui::ViewportBuilder::default()
         .with_title(ide_brand::DISPLAY_NAME)
-        // Must match the .desktop file name (packaging/linux/<app id>.desktop), or the dock shows
+        // Must match the installed .desktop file name (<app id>.desktop), or the dock shows
         // this raw id and a generic icon.
         .with_app_id(ide_brand::MACHINE_NAME)
         .with_inner_size([1200.0, 760.0])

@@ -6,8 +6,8 @@
 
 1. Change the colour under `TILE COLOUR` in `app-icon.svg`,
    or replace `app-icon.svg` with your own square SVG (512×512 works best).
-2. Run `scripts/app-icon.sh` — it renders `hicolor/` and `app-icon.png`.
-3. Run `scripts/install-desktop.sh` to see it in the dock while developing, then restart the app.
+2. Run `scripts/install-desktop.sh`. It renders `hicolor/` and `app-icon.png` (via
+   `scripts/app-icon.sh`) and installs them, so the dock shows the new icon. Restart the app.
 
 ## Files
 
@@ -17,7 +17,7 @@
 | `app-icon.png` | 256 px render | Window icon, embedded by `apps/*/src/main.rs` (X11, Windows) |
 | `hicolor/<size>/apps/<app id>.png`, `hicolor/scalable/apps/<app id>.svg` | Linux icon theme | Dock, app menu, `.deb` |
 
-The `<app id>` is `MACHINE_NAME` from `crates/brand`. It must match the `.desktop` file name and
-the `Icon=` line in `packaging/linux/`, or the desktop shows a generic icon.
+The `<app id>` is `MACHINE_NAME` from `crates/brand`. `scripts/install-desktop.sh` uses it for the
+`.desktop` file name and its `Icon=` line, so they always match.
 
 Original artwork, MIT like the rest of the project.
