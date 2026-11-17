@@ -8,10 +8,10 @@ Commands you type by hand. Run them from the project folder.
 cargo run
 ```
 
-Optimised build, closer to what users get (slower to compile):
+Update the dock name and icon (Linux, after changing either; then restart the app):
 
 ```sh
-scripts/install-desktop.sh 
+scripts/install-desktop.sh
 ```
 
 ## Before committing
@@ -23,6 +23,7 @@ cargo fmt
 cargo clippy --all-targets -- -D warnings
 cargo test
 ```
+
 Optimised build, closer to what users get (slower to compile):
 
 ```sh
