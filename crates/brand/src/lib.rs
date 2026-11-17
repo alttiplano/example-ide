@@ -3,7 +3,7 @@
 
 /// Shown to people: window title, dock and app menu, About, update dialog.
 /// After changing it, run `scripts/install-desktop.sh` so the dock shows it too.
-pub const DISPLAY_NAME: &str = "Example IDE 222";
+pub const DISPLAY_NAME: &str = "Example IDE";
 
 /// Used by machines: binary, package and .desktop file name.
 pub const MACHINE_NAME: &str = "example-ide";
