@@ -22,16 +22,14 @@ impl Files {
         ui.heading("Files");
         ui.separator();
 
-        egui::ScrollArea::vertical()
-            .auto_shrink(false)
-            .show(ui, |ui| {
-                for (index, name) in FAKE_FILES.iter().enumerate() {
-                    let is_selected = self.selected == Some(index);
-                    if ui.selectable_label(is_selected, *name).clicked() {
-                        self.selected = Some(index);
-                    }
+        egui::ScrollArea::vertical().auto_shrink(false).show(ui, |ui| {
+            for (index, name) in FAKE_FILES.iter().enumerate() {
+                let is_selected = self.selected == Some(index);
+                if ui.selectable_label(is_selected, *name).clicked() {
+                    self.selected = Some(index);
                 }
-            });
+            }
+        });
     }
 
     pub fn selected_name(&self) -> Option<&'static str> {

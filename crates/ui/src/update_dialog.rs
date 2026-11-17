@@ -39,10 +39,7 @@ pub fn show(ctx: &egui::Context, offer: &UpdateOffer) -> Option<UpdateChoice> {
         ui.set_width(320.0);
         ui.heading(format!("Update {}", offer.app_name));
         ui.add_space(8.0);
-        ui.label(
-            egui::RichText::new(format!("{} → {}", offer.current_version, offer.new_version))
-                .size(18.0),
-        );
+        ui.label(egui::RichText::new(format!("{} → {}", offer.current_version, offer.new_version)).size(18.0));
         ui.hyperlink_to("What's new", &offer.release_url);
         ui.add_space(12.0);
 

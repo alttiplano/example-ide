@@ -21,13 +21,11 @@ impl eframe::App for App {
     /// Called every frame: egui redraws the whole window from the state above.
     fn ui(&mut self, ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
         // Edge panels first, the central panel last: it takes the space that is left.
-        egui::Panel::bottom("status_bar")
-            .exact_size(26.0)
-            .show(ui, |ui| {
-                if status_bar::show(ui) {
-                    self.update_offer = Some(UpdateOffer::fake());
-                }
-            });
+        egui::Panel::bottom("status_bar").exact_size(26.0).show(ui, |ui| {
+            if status_bar::show(ui) {
+                self.update_offer = Some(UpdateOffer::fake());
+            }
+        });
 
         egui::Panel::left("chat")
             .resizable(true)
