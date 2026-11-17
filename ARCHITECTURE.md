@@ -52,6 +52,7 @@ example-ide/
 ├── clippy.toml                      # Code-checker settings
 ├── guide.md                         # The mission plan
 ├── LICENSE                          # MIT
+├── NOTES.md                         # Commands you type by hand: run, checks, name/icon
 ├── README.md
 ├── rust-toolchain.toml              # Rust compiler: stable + rustfmt + clippy
 └── rustfmt.toml                     # Code style: 120 columns
