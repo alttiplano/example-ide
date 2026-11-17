@@ -11,6 +11,8 @@ Example IDE: a desktop IDE written in Rust with **egui/eframe 0.37**. Linux firs
 ## Commands
 
 - Run: `cargo run`
+- Linux dock name and icon: after changing `DISPLAY_NAME` or `assets/app-icon/app-icon.svg`, run
+  `scripts/install-desktop.sh` (`--remove` undoes it). Windows and macOS don't use it.
 - A change is done only when all of these pass:
   `cargo fmt --check`, `cargo clippy --all-targets -- -D warnings`, `cargo test`
 

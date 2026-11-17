@@ -33,9 +33,11 @@ example-ide/
 │       ├── app-icon.svg             # The master: the only icon file you edit
 │       ├── app-icon.png             # Generated: window icon (embedded by main.rs)
 │       └── hicolor/                 # Generated: Linux icon sizes, named after the app id
-├── packaging/
-│   └── linux/
-│       └── app.desktop.in           # Dock/menu entry template; name and id filled from brand
+├── packaging/                       # Turns the program into what users install, one folder per OS
+│   ├── linux/
+│   │   └── app.desktop.in           # Dock/menu entry template; name and id filled from brand
+│   ├── macos/README.md              # Not built yet: what goes here (.app, .dmg)
+│   └── windows/README.md            # Not built yet: what goes here (installer, .exe icon)
 ├── scripts/                         # Developer shell helpers
 │   ├── app-icon.sh                  # Renders app-icon.svg into app-icon.png and hicolor/
 │   └── install-desktop.sh           # Registers the dev build: name + icon in the dock (--remove)
