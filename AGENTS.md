@@ -1,7 +1,7 @@
 # AGENTS.md
 
 Rules for AI assistants working in this repository. `guide.md` is the mission plan;
-`docs/architecture.md` is the layer table. This file is the short version of both.
+`ARCHITECTURE.md` is the project tree and layer table. This file is the short version of both.
 
 ## What this is
 
@@ -16,7 +16,7 @@ Example IDE: a desktop IDE written in Rust with **egui/eframe 0.37**. Linux firs
 
 ## Rules
 
-- **Layers** (see `docs/architecture.md`): egui only in `crates/ui` and `apps/`. Logic crates
+- **Layers** (see `ARCHITECTURE.md`): egui only in `crates/ui` and `apps/`. Logic crates
   never draw.
 - **The name lives in `crates/brand`.** Never hard-code the product name, repo or version elsewhere.
 - **Never block the window.** Slow work goes on a background thread; call `ctx.request_repaint()`
