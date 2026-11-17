@@ -31,7 +31,6 @@ example-ide/
 ├── assets/                          # Icons, fonts, images the app ships with
 │   └── app-icon/                    # The app icon — see its README.md
 │       ├── app-icon.svg             # The master: the only icon file you edit
-│       ├── options/                 # Colour choices to copy over the master
 │       ├── app-icon.png             # Generated: window icon (embedded by main.rs)
 │       └── hicolor/                 # Generated: Linux icon sizes, named after the app id
 ├── packaging/

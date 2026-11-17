@@ -10,7 +10,7 @@
   </defs>
   <g clip-path="url(#tile)">
     <!-- TILE COLOUR -->
-    <rect x="32" y="32" width="448" height="448" fill="#F0862C"/>
+    <rect x="32" y="32" width="448" height="448" fill="#2563EB"/>
     <!-- grid -->
     <path stroke="#ffffff" stroke-opacity="0.2" stroke-width="3" fill="none"
           d="M88 32V480 M32 88H480 M144 32V480 M32 144H480 M200 32V480 M32 200H480 M256 32V480 M32 256H480 M312 32V480 M32 312H480 M368 32V480 M32 368H480 M424 32V480 M32 424H480"/>
