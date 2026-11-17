@@ -29,7 +29,17 @@ example-ide/
 │           │   └── status_bar.rs    # Bottom: name, version, "Check for updates"
 │           └── update_dialog.rs     # Update dialog; takes its data as a parameter
 ├── assets/                          # Icons, fonts, images the app ships with
+│   └── app-icon/                    # The app icon — see its README.md
+│       ├── app-icon.svg             # The master: the only icon file you edit
+│       ├── options/                 # Colour choices to copy over the master
+│       ├── app-icon.png             # Generated: window icon (embedded by main.rs)
+│       └── hicolor/                 # Generated: Linux icon sizes, named after the app id
+├── packaging/
+│   └── linux/
+│       └── example-ide.desktop      # Name + icon in the dock and app menu; file name = app id
 ├── scripts/                         # Developer shell helpers
+│   ├── app-icon.sh                  # Renders app-icon.svg into app-icon.png and hicolor/
+│   └── install-desktop.sh           # Registers the dev build with the desktop (--remove to undo)
 ├── target/                          # Build output (gitignored)
 ├── .gitattributes                   # Line endings: LF everywhere
 ├── .gitignore
@@ -68,3 +78,5 @@ A crate may depend only on crates in **lower** layers.
 6. **Shared dependencies are declared once** in the root `Cargo.toml`; crates write `name.workspace = true`.
 7. **A new feature** = an L1 crate (with tests) + a panel in `ui` + one line in the app.
 8. **Never block the window.** Slow work runs on a background thread and reports back.
+9. **The app id ties the desktop together.** `MACHINE_NAME` is the Wayland app id, the `.desktop`
+   file name and the icon file name. If they differ, the dock shows the raw id and a generic icon.

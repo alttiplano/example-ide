@@ -101,7 +101,7 @@ example-ide/
 │           ├── widgets/        #     reusable pieces (the showcase card, later buttons, cards)
 │           └── update_dialog.rs
 ├── assets/
-│   └── icons/                  # app icon (original artwork only)
+│   └── app-icon/               # app icon: app-icon.svg master + generated sizes (original artwork only)
 ├── packaging/
 │   └── linux/                  # example-ide.desktop and anything the .deb needs
 ├── docs/
@@ -295,8 +295,8 @@ with egui. If not, stop and discuss before going on.
 2. The package must install:
    - the binary to `/usr/bin/example-ide`
    - `packaging/linux/example-ide.desktop` to `/usr/share/applications/`
-   - an icon to `/usr/share/icons/hicolor/256x256/apps/example-ide.png` (a simple placeholder
-     icon is fine; it must be original, not copied from another product)
+   - the icons in `assets/app-icon/hicolor/` to `/usr/share/icons/hicolor/` (rendered by
+     `scripts/app-icon.sh`; original artwork, not copied from another product)
 3. Name the output `example-ide-<version>-linux-x86_64.deb`. The updater relies on this pattern.
 4. Install it: `sudo apt install ./example-ide-0.0.1-linux-x86_64.deb`.
 

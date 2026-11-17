@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Example IDE
+GenericName=Code Editor
+Comment=Write and edit code
+Exec=example-ide %F
+Icon=example-ide
+Terminal=false
+Categories=Development;IDE;
+Keywords=code;editor;ide;
+StartupNotify=true
+StartupWMClass=example-ide
