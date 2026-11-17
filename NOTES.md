@@ -11,7 +11,7 @@ cargo run
 Optimised build, closer to what users get (slower to compile):
 
 ```sh
-cargo run --release
+scripts/install-desktop.sh 
 ```
 
 ## Before committing
@@ -22,6 +22,11 @@ All three must pass:
 cargo fmt
 cargo clippy --all-targets -- -D warnings
 cargo test
+```
+Optimised build, closer to what users get (slower to compile):
+
+```sh
+cargo run --release
 ```
 
 ## Change the name or the icon
